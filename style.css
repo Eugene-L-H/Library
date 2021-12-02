@@ -1,11 +1,14 @@
 html,
 body {
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   height: 100vh;
-  width: 100vw;
 }
 
 #top-banner {
@@ -17,7 +20,7 @@ body {
   border: solid black 1px;
 }
 
-#top-banner p {
+h1 {
   position: absolute;
   justify-self: center;
   font-size: 3rem;
@@ -31,10 +34,62 @@ body {
   color: white;
 }
 
+.popup {
+  position: absolute;
+  align-self: center;
+  margin-top: 7rem;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.no-click {
+  pointer-events: none;
+}
+
+.popup-content {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-color: cornflowerblue;
+  border: black solid 1px;
+  z-index: 1;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Add animation (fade in the popup)
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
 #bookshelf {
   display: flex;
   flex-flow: row wrap;
   margin-top: 40px;
+  background-color: #4b2512;
+  background-image: url('https://cdn.wallpapersafari.com/24/43/rINcAy.jpg');
 }
 
 .book {
@@ -43,7 +98,14 @@ body {
   align-items: center;
   justify-content: space-evenly;
   height: 21rem;
-  width: 15rem;
+  width: 120px;
   writing-mode: vertical-lr;
+  background-color: dimgrey;
   border: solid black 1px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: auto 0 10px 0;
 }

@@ -5,18 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/functions.js" defer></script>
     <title>Book Shelf</title>
   </head>
   <body>
     <div id="top-banner">
-      <p>Book Shelf</p>
+      <h1>Book Shelf</h1>
       <button class="add-book">Add Book</button>
+    </div>
+    <div class="popup hide">
+      <div class="popup-content">
+        <form action="">
+          <h2 class="form-title">Add a Book:</h2>
+          <label for="title">Book Title:</label>
+          <input type="text" name="title" id="title" />
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" />
+          <label for="pages">How many pages?:</label>
+          <input type="number" name="pages" id="pages" />
+          <input type="button" value="Add Book to Shelf" id="submit-book" />
+        </form>
+      </div>
     </div>
     <div id="bookshelf">
       <div class="book">
         <p class="title">Blackhawk Down</p>
       </div>
     </div>
+    <footer>A project developed by Eugene 2021</footer>
   </body>
 </html>
