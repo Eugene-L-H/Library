@@ -9,6 +9,14 @@ body {
   flex-direction: column;
   overflow: hidden;
   height: 100vh;
+  background-color: #333;
+}
+
+.blur {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(3px);
 }
 
 #top-banner {
@@ -19,6 +27,7 @@ body {
   height: 8rem;
   background-color: navy;
   border: solid black 1px;
+  border-top: none;
 }
 
 h1 {
@@ -66,6 +75,22 @@ h1 {
   align-items: center;
 }
 
+.popup-content input {
+  width: 275px;
+  height: 25px;
+  border-radius: 3px;
+}
+
+#pages {
+  width: 80px;
+}
+
+#submit-book {
+  width: 125px;
+  height: 34px;
+  border-radius: 10px;
+}
+
 /* Add animation (fade in the popup)
 @-webkit-keyframes fadeIn {
   from {
@@ -102,6 +127,7 @@ h1 {
   height: 24rem;
   max-width: 235px;
   min-width: 25px;
+  word-wrap: break-word;
   background-color: dimgrey;
   border: solid black 1px;
 }
@@ -113,6 +139,8 @@ h1 {
 
 .book .author {
   text-align: center;
+  white-space: initial;
+  word-wrap: break-word;
   margin-bottom: 30px;
 }
 
