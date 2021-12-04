@@ -1,9 +1,9 @@
 class Book {
-  constructor(title, author, pages, read) {
+  constructor(title, author, pages, color) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = read;
+    this.color = color;
   }
 }
 
@@ -11,6 +11,20 @@ function clearForm() {
   title.value = '';
   author.value = '';
   pages.value = '';
+  color.value = 'white';
+}
+
+// Shows or hides popup window when called.
+function togglePopup() {
+  // When book is submitted or 'close" button clicked forms are refreshed.
+  clearForm();
+
+  // Popup form becomes visble + background blur.
+  popup.classList.toggle('hide');
+  blur.classList.toggle('hide');
+
+  // While popup is active "Add Book" button is not clickable.
+  addBook.classList.toggle('no-click');
 }
 
 // Returns true if any form-field is left empty.
@@ -20,8 +34,10 @@ function emptyFields() {
   }
 }
 
-function createBook(title, author, pages) {
-  let newBook = new Book(title, author, pages);
+function createBook(title, author, pages, color) {
+  // const stripTitle = title.replace(/[^a-zA-Z ]/g, '');
+  const stripAuthor = author.replace(/[^a-zA-Z ]/g, '');
+  let newBook = new Book(title, stripAuthor, pages, color);
   bookshelf.push(newBook);
 }
 
@@ -56,9 +72,10 @@ function initials(author) {
 function bookHtml(newBook, width) {
   const div = document.createElement('div');
   div.className = 'book';
+  console.log(newBook.color);
 
   div.innerHTML = `
-  <div class="book" style="width: ${width}px">
+  <div class="book" style="width: ${width}px; background-color: ${newBook.color}">
     <span class="title">${newBook.title}</span>
     <span class="author" style="max-width: ${width}px">${newBook.author}</span>
   </div>
@@ -69,7 +86,7 @@ function bookHtml(newBook, width) {
 
 function populateShelf() {
   let newBook = bookshelf[bookshelf.length - 1];
-  width = Math.round(newBook.pages / 5);
+  width = Math.round(newBook.pages / 6);
 
   if (newBook.author.length > 3) {
     newBook.author = initials(newBook.author);
