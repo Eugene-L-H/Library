@@ -6,7 +6,8 @@ const blur = document.querySelector('.blur');
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const pages = document.querySelector('#pages');
-const color = document.querySelector('#select-color');
+const coverColor = document.querySelector('#cover-color');
+const textColor = document.querySelector('#text-color');
 const submitBook = document.querySelector('#submit-book');
 // On-screen bookshelf.
 const htmlBookshelf = document.querySelector('#bookshelf');
@@ -24,18 +25,21 @@ close.addEventListener('click', () => {
   togglePopup();
 });
 
-let colorVal;
 // Add listener to "Add Book to Shelf" button on popup form
 submitBook.addEventListener('click', () => {
-  colorVal = color.value;
   // Block submission if form has an empty field.
   if (emptyFields()) {
     return;
   }
 
   // Add books to shelf for "bookshelf" array.
-  console.log(color.value);
-  createBook(title.value, author.value, pages.value, color.value);
+  createBook(
+    title.value,
+    author.value,
+    pages.value,
+    coverColor.value,
+    textColor.value
+  );
   populateShelf();
 
   // Hide form after submitting book. Remove blur.

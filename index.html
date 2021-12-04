@@ -26,30 +26,119 @@
           <input type="text" name="author" id="author" />
           <label for="pages">How many pages?:</label>
           <input type="number" name="pages" id="pages" />
-          <label for="color">Cover Color:</label>
-          <select name="color" id="select-color">
-            <option value="white">White</option>
-            <option value="black">Black</option>
-            <option value="darkgrey">Grey</option>
-            <option value="grey">Light Grey</option>
-            <option value="darkred">Red</option>
-            <option value="red">Light Red</option>
-            <option value="green">Green</option>
-            <option value="darkgreen">Light Green</option>
-            <option value="blue">Blue</option>
-            <option value="dodgerblue">Light Blue</option>
-            <option value="yellow">Yellow</option>
-            <option value="lightyellow">Light Yellow</option>
-            <option value="saddlebrown">Brown</option>
-            <option value="sandybrown">Light Brown</option>
-            <option value="purple">Purple</option>
-            <option value="rebeccapurple">Light Purple</option>
-          </select>
-          <input type="button" value="Add Book to Shelf" id="submit-book" />
+          <label for="cover-color">Cover Color:</label>
+          <input
+            type="color"
+            id="cover-color"
+            name="cover-color"
+            value="#aaaaaa"
+          />
+          <label for="text-color">Text Color:</label>
+          <input
+            type="color"
+            id="text-color"
+            name="text-color"
+            value="#111111"
+          />
+          <input type="button" value="Add Book" id="submit-book" />
         </form>
       </div>
     </div>
-    <div id="bookshelf"></div>
+    <div id="bookshelf">
+      <!-- Placehoder Books-->
+      <div class="book">
+        <div class="book" style="width: 71px; background-color: sandybrown">
+          <span class="title">Clean Code</span>
+          <span class="author" style="max-width: 71px">Rob Martin</span>
+        </div>
+      </div>
+      <div class="book">
+        <div class="book" style="width: 152px; background-color: grey">
+          <span class="title">Code Complete </span>
+          <span class="author" style="max-width: 152px">Steve McConnell</span>
+        </div>
+      </div>
+      <div class="book">
+        <div class="book" style="width: 28px; background-color: lightblue">
+          <span class="title">Philosphy of Software Design</span>
+          <span class="author" style="max-width: 28px">J.Q</span>
+        </div>
+      </div>
+      <div class="book">
+        <div
+          class="book"
+          style="width: 73px; background-color: black; color: white"
+        >
+          <span class="title">HTML &amp; CSS design and build</span>
+          <span class="author" style="max-width: 73px">Jon Duckett</span>
+        </div>
+      </div>
+      <div class="book">
+        <div
+          class="book"
+          style="width: 180px; background-color: darkred; color: khaki"
+        >
+          <span class="title">JavaScript for Web Developers</span>
+          <span class="author" style="max-width: 180px">Matt Frisbie</span>
+        </div>
+      </div>
+      <div class="book">
+        <div
+          class="book"
+          style="width: 149px; background-color: rebeccapurple; color: white"
+        >
+          <span class="title">PHP and MySQL Web Development</span>
+          <span class="author" style="max-width: 149px">Laura Thompson</span>
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book" style="width: 139px; background-color: green">
+          <span class="title">PHP Cookbook</span>
+          <span class="author" style="max-width: 139px"
+            >Sklar Tratchenberg</span
+          >
+        </div>
+      </div>
+
+      <div class="book">
+        <div class="book" style="width: 81px; background-color: khaki">
+          <span class="title">Python Crash Course</span>
+          <span class="author" style="max-width: 81px">Matt Matthes</span>
+        </div>
+      </div>
+      <div class="book">
+        <div
+          class="book"
+          style="
+            width: 50px;
+            background-color: rgb(197, 179, 179);
+            color: darkred;
+          "
+        >
+          <span class="title">Bubishi</span>
+          <span class="author" style="max-width: 50px">Patrick McCarthy</span>
+        </div>
+      </div>
+      <div class="book">
+        <div
+          class="book"
+          style="width: 21px; background-color: grey; color: khaki"
+        >
+          <span class="title">Motobu Choki's "Karate, my Art"</span>
+          <span class="author" style="max-width: 21px">P.M</span>
+        </div>
+      </div>
+      <div class="book">
+        <div
+          class="book"
+          style="width: 54px; background-color: black; color: red"
+        >
+          <span class="title">Karate-Do Kyhan</span>
+          <span class="author" style="max-width: 54px">Gichin Fuanakoshi</span>
+        </div>
+      </div>
+    </div>
     <footer>A project developed by Eugene 2021</footer>
   </body>
 </html>
