@@ -44,12 +44,6 @@ h1 {
   color: white;
 }
 
-.popup {
-  position: absolute;
-  align-self: center;
-  margin-top: 7rem;
-}
-
 .hide {
   visibility: hidden;
 }
@@ -58,13 +52,29 @@ h1 {
   pointer-events: none;
 }
 
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 7rem;
+  background-color: cornflowerblue;
+  border: black solid 1px;
+}
+
+.close {
+  position: relative;
+  align-self: flex-end;
+  margin: 4px 4px 0 0;
+  background-color: lightgray;
+}
+
 .popup-content {
   display: flex;
   justify-content: center;
-  width: 400px;
+  flex-direction: column;
   height: 400px;
-  background-color: cornflowerblue;
-  border: black solid 1px;
+  width: 400px;
   z-index: 1;
 }
 
