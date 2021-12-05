@@ -76,9 +76,9 @@ function bookHtml(newBook, width) {
   div.className = 'book';
 
   div.innerHTML = `
-  <div class="book" style="width: ${width}px; background-color: ${newBook.coverColor}; color: ${newBook.textColor}">
+  <div class="book" style="width: ${width}vw; background-color: ${newBook.coverColor}; color: ${newBook.textColor}">
     <span class="title">${newBook.title}</span>
-    <span class="author" style="max-width: ${width}px">${newBook.author}</span>
+    <span class="author" style="max-width: ${width}vw">${newBook.author}</span>
   </div>
   `;
 
@@ -87,7 +87,8 @@ function bookHtml(newBook, width) {
 
 function populateShelf() {
   let newBook = bookshelf[bookshelf.length - 1];
-  width = Math.round(newBook.pages / 6);
+  let pixels = Math.round(newBook.pages) / 6;
+  let width = Math.round((pixels / 16) * 10) / 10;
 
   if (newBook.pages < 201) {
     newBook.author = initials(newBook.author);

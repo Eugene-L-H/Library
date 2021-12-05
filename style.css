@@ -135,8 +135,8 @@ form input,
 #bookshelf {
   display: flex;
   flex-flow: row wrap;
-  height: 45vh;
-  margin-top: 5vw;
+  height: 35vw;
+  margin-top: 3vw;
   background-color: #4b2512;
   background-image: url('https://cdn.wallpapersafari.com/24/43/rINcAy.jpg');
 }
@@ -146,8 +146,8 @@ form input,
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 45vh;
-  max-width: 176px;
+  height: 100%;
+  max-width: 22vw;
   min-width: 1vw;
   word-wrap: break-word;
   font-size: 1.75vh;
