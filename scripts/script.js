@@ -14,7 +14,21 @@ const submitBook = document.querySelector('#submit-book');
 const htmlBookshelf = document.querySelector('#bookshelf');
 
 // Array that will store book-objects.
-let bookshelf = [];
+let bookshelf = [
+  cleanCode,
+  codeComplete,
+  philSoft,
+  htmlCSS,
+  JSforWD,
+  PHPmySQL,
+  PHPcook,
+  automate,
+  motobu,
+  bubishi,
+  kyohan,
+];
+
+starterShelf(bookshelf); // Add place-holder library to shelf.
 
 // Clears shelf of all books when triggered.
 clearShelf.addEventListener('click', () => {

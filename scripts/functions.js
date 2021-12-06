@@ -43,8 +43,14 @@ function createBook(title, author, pages, coverColor, textColor) {
   bookshelf.push(newBook);
 }
 
-function initials(author) {
-  author = author.toUpperCase();
+function initials(book) {
+  // Large books don't need initials.
+  if (book.pages > 230) {
+    return book.author;
+  }
+
+  let author = book.author;
+
   let initialsArr = [];
   initialsArr.push(author[0]);
 
@@ -58,7 +64,7 @@ function initials(author) {
 
   // Return first initial if only one word present for author.
   if (initialsArr.length == 1) {
-    return initialsArr[0];
+    book.author = initialsArr[0];
   }
 
   let initials = '';
@@ -69,7 +75,9 @@ function initials(author) {
     initials += '.' + initialsArr[initialsArr.length - 1];
   }
 
-  return initials;
+  book.author = initials.toUpperCase();
+
+  return book.author;
 }
 
 function bookHtml(newBook, width) {
@@ -86,14 +94,17 @@ function bookHtml(newBook, width) {
   htmlBookshelf.appendChild(div);
 }
 
+function getWidth(pages) {
+  let pixels = Math.round(pages) / 6;
+  let width = Math.round((pixels / 16) * 10) / 10;
+  return width;
+}
+
 function populateShelf() {
   let newBook = bookshelf[bookshelf.length - 1];
-  let pixels = Math.round(newBook.pages) / 6;
-  let width = Math.round((pixels / 16) * 10) / 10;
+  let width = getWidth(newBook.pages);
 
-  if (newBook.pages < 231) {
-    newBook.author = initials(newBook.author);
-  }
+  newBook.author = initials(newBook);
 
   // Add html to the "id='bookshelf" div.
   bookHtml(newBook, width);
