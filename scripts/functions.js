@@ -44,6 +44,7 @@ function createBook(title, author, pages, coverColor, textColor) {
 }
 
 function initials(author) {
+  author = author.toUpperCase();
   let initialsArr = [];
   initialsArr.push(author[0]);
 
@@ -90,7 +91,7 @@ function populateShelf() {
   let pixels = Math.round(newBook.pages) / 6;
   let width = Math.round((pixels / 16) * 10) / 10;
 
-  if (newBook.pages < 201) {
+  if (newBook.pages < 231) {
     newBook.author = initials(newBook.author);
   }
 

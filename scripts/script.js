@@ -1,3 +1,4 @@
+const clearShelf = document.querySelector('.clear-shelf');
 const addBook = document.querySelector('.add-book');
 const popup = document.querySelector('.popup');
 const close = document.querySelector('.close');
@@ -14,6 +15,11 @@ const htmlBookshelf = document.querySelector('#bookshelf');
 
 // Array that will store book-objects.
 let bookshelf = [];
+
+// Clears shelf of all books when triggered.
+clearShelf.addEventListener('click', () => {
+  htmlBookshelf.innerHTML = '';
+});
 
 // Add listener to "Add Book" button in headerbar.
 addBook.addEventListener('click', () => {

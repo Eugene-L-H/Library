@@ -12,6 +12,7 @@
   <body>
     <div class="blur hide"></div>
     <div id="top-banner">
+      <button class="clear-shelf">Clear Shelf</button>
       <h1>Book Shelf</h1>
       <button class="add-book">Add Book</button>
     </div>
@@ -21,7 +22,7 @@
         <form>
           <h2 class="form-title">Add a Book:</h2>
           <label for="title">Book Title:</label>
-          <input type="text" name="title" id="title" maxlength="30" />
+          <input type="text" name="title" id="title" maxlength="37" />
           <label for="author">Author:</label>
           <input type="text" name="author" id="author" />
           <label for="pages">How many pages?:</label>
@@ -44,33 +45,41 @@
         </form>
       </div>
     </div>
+    <div class="top-shelf shelf"></div>
     <div id="bookshelf">
       <!-- Placehoder Books-->
       <div class="book">
-        <div class="book" style="width: 4vw; background-color: sandybrown">
-          <span class="title">Clean Code</span>
-          <span class="author" style="max-width: 71px">Rob Martin</span>
-        </div>
-      </div>
-      <div class="book">
-        <div class="book" style="width: 9vw; background-color: grey">
-          <span class="title">Code Complete </span>
-          <span class="author" style="max-width: 152px">Steve McConnell</span>
-        </div>
-      </div>
-      <div class="book">
-        <div class="book" style="width: 2vw; background-color: lightblue">
-          <span class="title">Philosphy of Software Design</span>
-          <span class="author" style="max-width: 28px">J.Q</span>
+        <div class="book" style="width: 4vw; background-color: lightgray">
+          <span class="title" style="max-width: 4vw">Clean Code</span>
+          <span class="author" style="max-width: 4vw">Rob Martin</span>
         </div>
       </div>
       <div class="book">
         <div
           class="book"
-          style="width: 4.5vw; background-color: black; color: white"
+          style="width: 8vw; background-color: #444; color: #eee"
         >
-          <span class="title">HTML &amp; CSS design and build</span>
-          <span class="author" style="max-width: 73px">Jon Duckett</span>
+          <span class="title" style="max-width: 8vw">Code Complete </span>
+          <span class="author" style="max-width: 8vw">Steve McConnell</span>
+        </div>
+      </div>
+      <div class="book">
+        <div class="book" style="width: 2vw; background-color: lightblue">
+          <span class="title" style="max-width: 2vw"
+            >Philosophy of Software Design</span
+          >
+          <span class="author" style="max-width: 2vw">J.O</span>
+        </div>
+      </div>
+      <div class="book">
+        <div
+          class="book"
+          style="width: 4.5vw; background-color: #151515; color: white"
+        >
+          <span class="title" style="max-width: 4.5vw"
+            >HTML &amp; CSS design and build</span
+          >
+          <span class="author" style="max-width: 4.5vw">Jon Duckett</span>
         </div>
       </div>
       <div class="book">
@@ -78,8 +87,10 @@
           class="book"
           style="width: 10.5vw; background-color: darkred; color: khaki"
         >
-          <span class="title">JavaScript for Web Developers</span>
-          <span class="author" style="max-width: 180px">Matt Frisbie</span>
+          <span class="title" style="max-width: 10.5vw"
+            >JavaScript for Web Developers</span
+          >
+          <span class="author" style="max-width: 10.5vw">Matt Frisbie</span>
         </div>
       </div>
       <div class="book">
@@ -87,15 +98,20 @@
           class="book"
           style="width: 9.25vw; background-color: rebeccapurple; color: white"
         >
-          <span class="title">PHP and MySQL Web Development</span>
-          <span class="author" style="max-width: 149px">Laura Thompson</span>
+          <span class="title" style="max-width: 9.25vw"
+            >PHP and MySQL Web Development</span
+          >
+          <span class="author" style="max-width: 9.25vw">Laura Thompson</span>
         </div>
       </div>
 
       <div class="book">
-        <div class="book" style="width: 8vw; background-color: green">
-          <span class="title">PHP Cookbook</span>
-          <span class="author" style="max-width: 139px"
+        <div
+          class="book"
+          style="width: 7.25vw; background-color: #009e9c; color: #ddd"
+        >
+          <span class="title" style="max-width: 7.25vw">PHP Cookbook</span>
+          <span class="author" style="max-width: 7.25vw"
             >Sklar Tratchenberg</span
           >
         </div>
@@ -103,8 +119,10 @@
 
       <div class="book">
         <div class="book" style="width: 5.5vw; background-color: khaki">
-          <span class="title">Python Crash Course</span>
-          <span class="author" style="max-width: 81px">Matt Matthes</span>
+          <span class="title" style="max-width: 5.5vw"
+            >Automate the Boring Stuff With Python</span
+          >
+          <span class="author" style="max-width: 5.5vw">Al Sweigart</span>
         </div>
       </div>
       <div class="book">
@@ -116,8 +134,8 @@
             color: darkred;
           "
         >
-          <span class="title">Bubishi</span>
-          <span class="author" style="max-width: 21px">Patrick McCarthy</span>
+          <span class="title" style="max-width: 3.5vw">Bubishi</span>
+          <span class="author" style="max-width: 3.5vw">Patrick McCarthy</span>
         </div>
       </div>
       <div class="book">
@@ -126,19 +144,20 @@
           style="width: 2vw; background-color: grey; color: khaki"
         >
           <span class="title">Motobu Choki's "Karate, my Art"</span>
-          <span class="author" style="max-width: 21px">P.M</span>
+          <span class="author" style="max-width: 2vw">P.M</span>
         </div>
       </div>
       <div class="book">
         <div
           class="book"
-          style="width: 3vw; background-color: black; color: red"
+          style="width: 3.5vw; background-color: black; color: red"
         >
-          <span class="title">Karate-Do Kyhan</span>
-          <span class="author" style="max-width: 54px">Gichin Fuanakoshi</span>
+          <span class="title" style="max-width: 3.5vw">Karate-Do Kyhan</span>
+          <span class="author" style="max-width: 3.5vw">Gichin Fuanakoshi</span>
         </div>
       </div>
     </div>
-    <footer>A project developed by Eugene 2021</footer>
+    <div class="bottom-shelf shelf"></div>
+    <footer>A project developed by Eugene &nbsp;<span>2021</span></footer>
   </body>
 </html>
