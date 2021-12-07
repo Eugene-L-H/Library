@@ -84,6 +84,6 @@
 
   /* Reduce shadow between books on smaller screens. Looks better. */
   .book {
-    border-right: 0;
+    border-left: 0;
   }
 }
