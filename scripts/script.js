@@ -3,7 +3,7 @@ const clearShelf = document.querySelector('.clear-shelf');
 const addBook = document.querySelector('.add-book');
 const popup = document.querySelector('.popup');
 const pageAlert = document.querySelector('.page-alert');
-const feildAlert = document.querySelector('.feild-alert');
+const fieldAlert = document.querySelector('.field-alert');
 const close = document.querySelector('.close');
 // Form inputs.
 const title = document.querySelector('#title');

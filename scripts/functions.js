@@ -39,14 +39,14 @@ function emptyFields() {
 }
 
 function hideAlerts() {
-  feildAlert.classList.add('hide');
+  fieldAlert.classList.add('hide');
   pageAlert.classList.add('hide');
 }
 
 function subButton() {
   // Block submission if form has an empty field.
   if (emptyFields()) {
-    feildAlert.classList.remove('hide');
+    fieldAlert.classList.remove('hide');
     return;
   }
 
