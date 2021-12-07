@@ -160,7 +160,7 @@ form input,
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;
-  height: 35vw;
+  height: 34vw;
   background-color: #4b2512;
   background-image: url('https://cdn.wallpapersafari.com/24/43/rINcAy.jpg');
   border-top: solid rgb(22, 10, 1) 0.3vw;
@@ -205,8 +205,9 @@ form input,
 }
 
 .bottom-shelf {
-  border-top: solid rgb(32, 17, 2) 4px;
-  margin-bottom: 2vw;
+  border-top: solid rgb(17, 8, 1) 4px;
+  border-bottom: solid rgb(17, 8, 1) 2px;
+  margin-bottom: 1vw;
 }
 
 footer {
@@ -214,7 +215,7 @@ footer {
   justify-content: center;
   font-size: 0.9vw;
   font-style: italic;
-  color: gainsboro;
+  color: #eee;
   margin: auto 0 1vw 0;
 }
 
