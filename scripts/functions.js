@@ -16,9 +16,14 @@ function clearForm() {
   textColor.value = '#000000';
 }
 
+function hideAlerts() {
+  fieldAlert.classList.add('hide');
+  pageAlert.classList.add('hide');
+}
+
 // Shows or hides popup window when called.
 function togglePopup() {
-  // Hide form errors that may have been displayed on popup.
+  // Hide form errors that may have been displayed on popup form.
   hideAlerts();
   // When book is submitted or 'close" button clicked forms are refreshed.
   clearForm();
@@ -36,11 +41,6 @@ function emptyFields() {
   if (title.value == '' || author.value == '' || pages.value == 0) {
     return true;
   }
-}
-
-function hideAlerts() {
-  fieldAlert.classList.add('hide');
-  pageAlert.classList.add('hide');
 }
 
 function subButton() {

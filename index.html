@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/small-popup.css" />
     <script src="scripts/functions.js" defer></script>
     <script src="scripts/default-books.js" defer></script>
     <script src="scripts/script.js" defer></script>
@@ -13,38 +14,48 @@
   <body>
     <div class="blur hide"></div>
     <div id="top-banner">
-      <button class="clear-shelf">Clear Shelf</button>
+      <input class="clear-shelf" type="button" value="Clear Shelf" />
       <h1>Book Shelf</h1>
-      <button class="add-book">Add Book</button>
+      <input class="add-book" type="button" value="Add Book" />
     </div>
     <div class="popup hide">
-      <button class="close">X</button>
       <div class="popup-content">
         <form>
-          <h2 class="form-title">Add a Book:</h2>
+          <div class="title-div">
+            <h2 class="form-title">Add a Book:</h2>
+            <input class="close" type="button" value="X" />
+          </div>
           <label for="title">Book Title:</label>
           <input type="text" name="title" id="title" maxlength="37" />
           <label for="author">Author:</label>
           <input type="text" name="author" id="author" />
-          <label for="pages">How many pages?:</label>
-          <div>
+          <div class="pages-div">
+            <label for="pages">How many pages?:</label>
             <input type="number" name="pages" id="pages" />
             <span class="page-alert">Too many pages.</span>
           </div>
-          <label for="cover-color">Cover Color:</label>
-          <input
-            type="color"
-            id="cover-color"
-            name="cover-color"
-            value="#aaaaaa"
-          />
-          <label for="text-color">Text Color:</label>
-          <input
-            type="color"
-            id="text-color"
-            name="text-color"
-            value="#111111"
-          />
+          <div class="colors-div">
+            <div>
+              <label for="cover-color">Cover Color:</label>
+              <input
+                type="color"
+                id="cover-color"
+                name="cover-color"
+                value="#aaaaaa"
+                colorpick-eyedropper-active="false"
+              />
+            </div>
+            <div>
+              <label for="text-color">Text Color:</label>
+              <input
+                type="color"
+                id="text-color"
+                name="text-color"
+                value="#111111"
+                colorpick-eyedropper-active="false"
+              />
+            </div>
+          </div>
           <div class="submit-book">
             <input type="button" value="ADD" id="submit-book" />
             <span class="field-alert hide">Missing fields</span>
