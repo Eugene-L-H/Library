@@ -12,12 +12,14 @@ function clearForm() {
   title.value = '';
   author.value = '';
   pages.value = '';
-  coverColor.value = '#fff';
-  textColor.value = '#fff';
+  coverColor.value = '#ffffff';
+  textColor.value = '#000000';
 }
 
 // Shows or hides popup window when called.
 function togglePopup() {
+  // Hide form errors that may have been displayed on popup.
+  hideAlerts();
   // When book is submitted or 'close" button clicked forms are refreshed.
   clearForm();
 
@@ -34,6 +36,46 @@ function emptyFields() {
   if (title.value == '' || author.value == '' || pages.value == 0) {
     return true;
   }
+}
+
+function hideAlerts() {
+  feildAlert.classList.add('hide');
+  pageAlert.classList.add('hide');
+}
+
+function subButton() {
+  // Block submission if form has an empty field.
+  if (emptyFields()) {
+    feildAlert.classList.remove('hide');
+    return;
+  }
+
+  if (pages.value > 2000) {
+    pageAlert.innerHTML = 'Too many pages';
+    pageAlert.classList.remove('hide');
+    return;
+  }
+
+  if (((pages.value / 100) * 10) / 10 + shelfSpace > 98) {
+    pageAlert.innerHTML = 'Too big for shelf!';
+    pageAlert.classList.remove('hide');
+    return;
+  }
+
+  // Add books to shelf for "bookshelf" array.
+  createBook(
+    title.value,
+    author.value,
+    pages.value,
+    coverColor.value,
+    textColor.value
+  );
+  populateShelf();
+
+  // Hide form after submitting book. Remove blur.
+  popup.classList.toggle('hide');
+  blur.classList.toggle('hide');
+  addBook.classList.toggle('no-click');
 }
 
 function createBook(title, author, pages, coverColor, textColor) {
@@ -95,9 +137,13 @@ function bookHtml(newBook, width) {
 }
 
 function getWidth(pages) {
-  let pixels = Math.round(pages) / 6;
-  let width = Math.round((pixels / 16) * 10) / 10;
+  let width = Math.round((pages / 100) * 10) / 10;
   return width;
+}
+
+// Add to shelfSpace variable equal to book's width.
+function addToShelf(width) {
+  shelfSpace += width;
 }
 
 function populateShelf() {
@@ -107,5 +153,6 @@ function populateShelf() {
   newBook.author = initials(newBook);
 
   // Add html to the "id='bookshelf" div.
+  addToShelf(width);
   bookHtml(newBook, width);
 }

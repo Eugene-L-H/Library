@@ -27,7 +27,10 @@
           <label for="author">Author:</label>
           <input type="text" name="author" id="author" />
           <label for="pages">How many pages?:</label>
-          <input type="number" name="pages" id="pages" />
+          <div>
+            <input type="number" name="pages" id="pages" />
+            <span class="page-alert">Too many pages.</span>
+          </div>
           <label for="cover-color">Cover Color:</label>
           <input
             type="color"
@@ -42,7 +45,10 @@
             name="text-color"
             value="#111111"
           />
-          <input type="button" value="Add Book" id="submit-book" />
+          <div class="submit-book">
+            <input type="button" value="ADD" id="submit-book" />
+            <span class="feild-alert hide">Missing feilds</span>
+          </div>
         </form>
       </div>
     </div>

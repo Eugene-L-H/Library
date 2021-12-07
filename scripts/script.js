@@ -1,8 +1,10 @@
+const blur = document.querySelector('.blur');
 const clearShelf = document.querySelector('.clear-shelf');
 const addBook = document.querySelector('.add-book');
 const popup = document.querySelector('.popup');
+const pageAlert = document.querySelector('.page-alert');
+const feildAlert = document.querySelector('.feild-alert');
 const close = document.querySelector('.close');
-const blur = document.querySelector('.blur');
 // Form inputs.
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
@@ -28,11 +30,14 @@ let bookshelf = [
   kyohan,
 ];
 
+let shelfSpace = 0;
+
 starterShelf(bookshelf); // Add place-holder library to shelf.
 
 // Clears shelf of all books when triggered.
 clearShelf.addEventListener('click', () => {
   htmlBookshelf.innerHTML = '';
+  shelfSpace = 0;
 });
 
 // Add listener to "Add Book" button in headerbar.
@@ -47,23 +52,5 @@ close.addEventListener('click', () => {
 
 // Add listener to "Add Book to Shelf" button on popup form
 submitBook.addEventListener('click', () => {
-  // Block submission if form has an empty field.
-  if (emptyFields()) {
-    return;
-  }
-
-  // Add books to shelf for "bookshelf" array.
-  createBook(
-    title.value,
-    author.value,
-    pages.value,
-    coverColor.value,
-    textColor.value
-  );
-  populateShelf();
-
-  // Hide form after submitting book. Remove blur.
-  popup.classList.toggle('hide');
-  blur.classList.toggle('hide');
-  addBook.classList.toggle('no-click');
+  subButton();
 });

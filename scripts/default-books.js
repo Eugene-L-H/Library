@@ -79,6 +79,7 @@ function starterShelf(bookshelf) {
 
     currentBook.author = initials(currentBook);
 
+    addToShelf(width);
     bookHtml(currentBook, width);
   }
 }
