@@ -40,5 +40,11 @@ Library scales to mobile devices but is best experienced on desktop.
 
 # Notes
 This project made start thinking about how important mobile-first design can be.
-I built Library as a desktop app first, but 
+
+I built Library as a desktop app first. At about the midpoint of the project I
+decided it should be able to scale to mobile devices. I found it quite
+challenging scaling the project down as opposed to how much easier I think it
+would've been to scale up from mobile to desktop.
+
+I now tend to focus on a more mobile first design.
 
