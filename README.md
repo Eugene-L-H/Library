@@ -12,17 +12,17 @@ appear on the shelf. Once the shelf is full, no further books can be added until
 the shelf is cleared.
 
 # Instructons
-The shelf comes pre-populated several books. The red 'Clear Shelf' button in the top
+The shelf comes pre-populated with several books. The red '*Clear Shelf*' button in the top
 left of the screen can be used to clear all books from the shelf. 
 
-When the 'Add Book' button is pushed a 'Add a Book:' popup is displayed. 
-- The 'X' button in the top right closes the popup and clears all forms.
-- User can input the title and author of their book in their respective fields.
+When the '*Add Book*' button is pushed a '*Add a Book:*' popup is displayed: 
+- The '*X*' button in the top right closes the popup and clears all forms.
+- User can input the *title* and *author* of their book in their respective fields.
 - The number of pages entered will determine how wide the book appears on the
   shelf. A book can be no longer than 2000 pages.
 - Color pickers for the book cover and text color can be used to alter the color
   scheme of the book.
-- The blue 'ADD' button can be pressed and the book will appear on the shelf.
+- The blue '*ADD*' button can be pressed and the book will appear on the shelf.
   All fields must be filled in order for the book to be submitted.
 
 No further books can be added if the shelf becomes full. The shelf will have to
