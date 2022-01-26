@@ -11,8 +11,8 @@ The higher the page count the thicker the book will
 appear on the shelf. Once the shelf is full, no further books can be added until
 the shelf is cleared.
 
-# Instructons
-The shelf comes pre-populated with several books. The red '*Clear Shelf*' button in the top
+# Instructions
+The shelf comes prepopulated with several books. The red '*Clear Shelf*' button in the top
 left of the screen can be used to clear all books from the shelf. 
 
 When the '*Add Book*' button is pushed a '*Add a Book:*' popup is displayed: 
@@ -20,8 +20,8 @@ When the '*Add Book*' button is pushed a '*Add a Book:*' popup is displayed:
 - User can input the *title* and *author* of their book in their respective fields.
 - The number of pages entered will determine how wide the book appears on the
   shelf. A book can be no longer than 2000 pages.
-- Color pickers for the book cover and text color can be used to alter the color
-  scheme of the book.
+- Color pickers for the '*book cover*' and '*text color*' can be used to alter
+  the look of the book.
 - The blue '*ADD*' button can be pressed and the book will appear on the shelf.
   All fields must be filled in order for the book to be submitted.
 
@@ -29,7 +29,7 @@ No further books can be added if the shelf becomes full. The shelf will have to
 be cleared using the 'Clear Shelf' button before another book can be added.
 
 # Installation/Run
-Countdown can be run from https://eugene-l-h.github.io/Library/ or by
+Library can be run from https://eugene-l-h.github.io/Library/ or by
 downloading the files and opening the index.html file in the browser of your
 choice. 
 
@@ -39,7 +39,7 @@ This project was developed and tested in Google Chrome on screen resolutions of
 Library scales to mobile devices but is best experienced on desktop.
 
 # Notes
-This project made start thinking about how important mobile-first design can be.
+This project urged me to think about how important mobile-first design can be.
 
 I built Library as a desktop app first. At about the midpoint of the project I
 decided it should be able to scale to mobile devices. I found it quite
